@@ -107,7 +107,7 @@ inputset = [(2, 3), (0, 0), (1, 6), (7, 7), (7, 1), (3, 2), (6, 1), (1, 7), (4, 
 Here, our inputset consists of 10 integer pairs, ranging from a minimum of `(0, 0)` to a maximum of `(7, 7)`.
 
 {% hint style="warning" %}
-Choosing a representative inputset is critical to allow the compiler to find accurate bounds of all the intermediate values (see more details [here](https://docs.zama.ai/concrete/explanations/compilation#bounds-measurement)). Evaluating the circuit with input values under or over the bounds may result in undefined behavior.
+Choosing a representative inputset is critical to allow the compiler to find accurate bounds of all the intermediate values (see more details [here](https://docs.zama.ai/concrete/explanations/compiler_workflow#bounds-measurement)). Evaluating the circuit with input values under or over the bounds may result in undefined behavior.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -149,9 +149,3 @@ encrypted_x, encrypted_y = circuit.encrypt(2, 6)
 encrypted_result = circuit.run(encrypted_x, encrypted_y)
 result = circuit.decrypt(encrypted_result)
 ```
-
-{% hint style="success" %}
-**Zama 5-Question Developer Survey**
-
-We want to hear from you! Take 1 minute to share your thoughts and helping us enhance our documentation and libraries. **👉** [**Click here**](https://www.zama.ai/developer-survey) to participate.
-{% endhint %}
